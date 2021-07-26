@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>Sonatype Nexus 介紹</title>
+
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/logo/nexus-logo.png">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container-fluid  nav-container">
+
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Kora</a> -->
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html" style="text-decoration:none"><img
+                    src="images/logo/nexus-logo.png" class="mr-3" alt="nexus-logo">Sonatype Nexus</a>
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="https://hub.docker.com/r/sonatype/nexus3/">Docker hub
+                            下載</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="https://help.sonatype.com/docs">官方文件</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="https://hackmd.io/@measomman/HJ01wC12v">操作手冊</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">語言</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item page-scroll" href="article.html">中文</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item page-scroll" href="terms.html">English</a>
+                        </div>
+                    </li>
+                </ul>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container intro-container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h1 class="h1-large">透過 UI 介面操作，<br>輕鬆管理不同套件</h1>
+                        <p class="p-large">Sonatype Nexus 是一個強大的 Maven
+                            儲存庫管理器，<br>但他同時也支援眾多不同的儲存庫格式，在權限和套件管理上也很完善，非常適合架設在公司內部使用</p>
+                        <div class="d-flex">
+                            <a class="btn-solid-lg" target="_blank"
+                                href="https://www.youtube.com/watch?v=skN0JasoM0Q">架設教學</a>
+                            <a class="btn-outline-lg page-scroll" target="_blank"
+                                href="https://drive.google.com/file/d/1emNU2ORiWXHrRBXcmjLTHYl6oNGqq4Ga/view?usp=sharing">介紹教學</a>
+                        </div>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 pl-4">
+                    <div class="image-container">
+                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/6nVa-TERKek"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+    <!-- Customers -->
+    <div class="slider-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>可選擇自己常用的套件管理工具</h4>
+                    <hr class="section-divider">
+
+                    <!-- Image Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container image-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/logo/customer-logo-1.png" alt="docker">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/logo/customer-logo-2.png" alt="npm">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/logo/customer-logo-3.png" alt="pypi">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/logo/customer-logo-4.png" alt="maven">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/logo/customer-logo-5.png" alt="rubygems">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" src="images/logo/customer-logo-6.png" alt="go">
+                                </div>
+                            </div> <!-- end of swiper-wrapper -->
+                        </div> <!-- end of swiper container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of image slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-1 -->
+    <!-- end of customers -->
+
+
+    <!-- Introduction -->
+    <div id="intro" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 ">
+                    <img class="img-fluid" src="images/repo-formats.png" alt="alternative">
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <h2>支援多種 Repository Formats，提供不同族群使用</h2>
+                        <p>我們通常不會只使用一種套件管理工具，透過支援多種 Repository Formats 來方便使用者和公司內部管理這些套件，除了能儲存現在流行的 Docker images外
+                            ，還有許多程式語言的套件管理模組也能儲存在 Repository 中，方便以們使用和統一管理不同套件
+                        </p>
+                        <a class="btn-solid-reg" target="_blank"
+                            href="https://help.sonatype.com/repomanager3/formats">了解更多</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of introduction -->
+
+
+    <!-- Features -->
+    <div id="features" class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="h2-heading">Administration Menu</h2>
+                    <p class="p-heading">主要由幾個部分組成，常用的有儲存庫、權限安全、支援工具，每個主功能下還有多個能夠調整細節和操作的服務</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <span class="fas fa-database"></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Repository</h4>
+                            <p>儲存庫功能允許我們管理所有儲存庫和相關配置，例如路由和限制。</p>
+                            <a class="read-more no-line" target="_blank"
+                                href="https://help.sonatype.com/repomanager3/repository-management">了解更多<span
+                                    class="fas fa-long-arrow-alt-right"></span></a>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <span class="fas fa-user-shield"></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Security</h4>
+                            <p>安全功能提供用戶身份驗證和授權相關的所有配置和訪問，包括 Privileges、 Roles、 Users 以及 SSL 證書 和 用戶令牌 （僅限專業版）。</p>
+                            <a class="read-more no-line" target="_blank" href="https://help.sonatype.com/repomanager3/rest-and-integration-api/security-management-api
+                                ">了解更多<span class="fas fa-long-arrow-alt-right"></span></a>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">
+                                <span class="fas fa-info-circle"></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Support</h4>
+                            <p>支援功能訪問允許成功管理和監視存儲庫管理器的許多功能，例如 日誌記錄 和 系統信息。</p>
+                            <a class="read-more no-line" target="_blank"
+                                href="https://help.sonatype.com/repomanager3/system-configuration/support-features">了解更多<span
+                                    class="fas fa-long-arrow-alt-right"></span></a>
+                        </div>
+                    </div>
+                    <!-- end of card -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+    <!-- end of features -->
+
+
+    <!-- Details 1 -->
+    <div id="details" class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="intro">
+                        <h2>建立私人儲存庫流程</h2>
+                        <p>使用 Sonatype Nexus
+                            最主要的目的就是要統一管理會使用到的套件在自己公司內部，往後就不需要透過遠端的方式去下載這些套件，不僅能減少消耗公司網路頻寬，
+                            也減少安全性和傳輸過程發生意外的機率，整個建立儲存庫的流程大致分為以下三個步驟，可以根據所使用的套件來建立相對應的儲存庫。
+                        </p>
+                    </div> <!-- end of intro -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/banner/banner-step1.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <div class="section-title">Step 1</div>
+                        <h2>登入主畫面</h2>
+                        <p>首次登入需要使用 Nexus 提供的預設密碼，之後登入時會再要求更換新密碼，完成後就能成功登入到 Sonatype Nexus 的歡迎頁面</p>
+                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox">Lightbox</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of details 1 -->
+
+
+    <!-- Details Lightbox -->
+    <!-- Lightbox -->
+    <div id="details-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <div class="image-container">
+                    <img class="img-fluid" src="images/details-lightbox.jpg" alt="alternative">
+                </div> <!-- end of image-container -->
+            </div> <!-- end of col -->
+            <a class="btn-solid-reg mfp-close page-scroll" href="sign-up.html">Sign Up</a> <button
+                class="btn-outline-reg mfp-close as-button" type="button">Back</button>
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+    <!-- end of details lightbox -->
+
+
+    <!-- Details 2 -->
+    <div class="basic-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <div class="section-title">Step 2</div>
+                        <h2>選擇要建立的儲存庫格式</h2>
+                        <p>登入完成後，點擊建立儲存庫並選擇要存放的格式，選擇完成後依照欄位內容填寫相關設定，
+                            完成後就會在主頁面看到建立成功的儲存庫</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/banner/banner-step2.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of details 2 -->
+
+
+    <!-- Details 3 -->
+    <div class="basic-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/banner/banner-step3.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-5">
+                    <div class="text-container">
+                        <div class="section-title">Step 3</div>
+                        <h2>連線儲存庫管理套件</h2>
+                        <p>透過先前建立儲存庫的埠號來與本地端連線，使用指令上傳下載要管理的套件，完成上傳的套件會以樹狀結構和版本號呈現，也可以依照自己的需求調整。</p>
+                        <a class="btn-solid-reg" href="sign-up.html">Sign up now</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-4 -->
+    <!-- end of details 3 -->
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12  pt-4">
+                    <p class="p-small">Copyright © <a href="#your-link">高雄師範大學軟體工程與管理學系 SDPM 實驗室</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>
